@@ -1,0 +1,76 @@
+# Default values for cloudcasa-register.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+
+replicaCount: 1
+
+AMDS_CLUSTER_ID: 5fc4bb45fe755d6ed9e77551
+AMDS_CLUSTER_TYPE: production
+
+velero_csi_plugin_image:
+  registry: docker.io
+  repository: catalogicsoftware/velero-plugin-for-csi
+  tag: v0.1.2.1
+  pullPolicy: IfNotPresent
+  debug: false
+
+velero_aws_plugin_image:
+  registry: docker.io
+  repository: velero/velero-plugin-for-aws
+  tag: v1.1.0
+  pullPolicy: IfNotPresent
+  debug: false
+  
+velero_image:
+  registry: docker.io
+  repository: velero/velero
+  tag: v1.5.2
+  pullPolicy: IfNotPresent
+  debug: false
+
+kagent_image:
+  registry: docker.io
+  repository: catalogicsoftware/amds-kagent
+  tag: 0.1.0-rc.248
+  pullPolicy: IfNotPresent
+  debug: false
+
+request_velero_memory: 128Mi
+request_velero_cpu: 500m
+limit_velero_memory: 512Mi
+limit_velero_cpu: 1
+request_kubeagent_memory: 32Mi
+request_kubeagent_cpu: 250m
+limit_kubeagent_memory: 64Mi
+limit_kubeagent_cpu: 500m
+
+# Placeholder configuration below this line
+imagePullSecrets: []
+nameOverride: ""
+fullnameOverride: ""
+
+serviceAccount:
+  create: true
+  annotations: {}
+  name: ""
+
+podAnnotations: {}
+
+podSecurityContext: {}
+
+securityContext: {}
+
+resources: {}
+
+autoscaling:
+  enabled: false
+  minReplicas: 1
+  maxReplicas: 1
+  targetCPUUtilizationPercentage: 80
+  targetMemoryUtilizationPercentage: 80
+
+nodeSelector: {}
+
+tolerations: []
+
+affinity: {}

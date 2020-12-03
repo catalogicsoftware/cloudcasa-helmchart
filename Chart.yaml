@@ -1,0 +1,6 @@
+apiVersion: v2
+name: cloudcasa-app
+description: Helm chart for Kubernetes to register cloudcasa Kubeagent
+type: application
+version: 0.1.248
+appVersion: 0.1.248

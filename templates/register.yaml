@@ -2892,10 +2892,7 @@ spec:
     spec:
       containers:
       - image: "{{ .Values.kagent_image.repository }}:{{ .Values.kagent_image.tag }}"
-        {{- if eq .Values.AMDS_CLUSTER_TYPE "production" }}
         args: ["/usr/local/bin/kubeagent", "--server_addr", "agent.cloudcasa.io:443", "--tls", "true"]
-        {{- else if eq .Values.AMDS_CLUSTER_TYPE "staging" }}
-        args: ["/usr/local/bin/kubeagent", "--server_addr", "agent.staging.cloudcasa.io:443", "--tls", "true"]
         {{- end }}
 
         name: kubeagent

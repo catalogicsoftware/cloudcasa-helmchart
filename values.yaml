@@ -5,7 +5,7 @@
 replicaCount: 1
 
 AMDS_CLUSTER_ID: 5fc4bb45fe755d6ed9e77551
-AMDS_CLUSTER_TYPE: production
+#AMDS_CLUSTER_TYPE: production
 
 velero_csi_plugin_image:
   registry: docker.io

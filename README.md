@@ -8,21 +8,21 @@ This chart bootstraps a kube-agent deployment on a client Kuberntes [Kubernetes]
 ## Helm Chart installation modes
 
 - CLI based installation
-##### Update the value of AMDS_CLUSTER_ID and AMDS_CLUSTER_TYPE in the values.yaml file.
+##### Update the value of AMDS_CLUSTER_ID in the values.yaml file.
 
 ```
-1. helm repo add cloudcasa https://nitishdsharma.github.io/cloudcasa-hc
+1. helm repo add cloudcasa https://nitishdsharma.github.io/cloudcasa-helm
 2. helm search repo cloudcasa
 3. helm install <release name> cloudcasa/cloudcasa-app -f values.yaml
 ```
 - Helmchart hosted on Rancher Apps
 
 ```
-1. Register the cloudcasa helm chart repo in the Rancher Apps Repository
+1. Register the cloudcasa helm chart repo in the Rancher Apps Repository.
 2. Go to charts select the repo -> Cloudcasa-app chart.
 3. Provide the name of release. 
-4. In cloudcasa setting section, provide the AMDS_CLUSTER_ID and the AMDS_CLUSTER_TYPE
-5. Click on Install button
+4. In cloudcasa setting section, provide the AMDS_CLUSTER_ID.
+5. Click on Install button.
 ```
 
 ## Upgrade Notes

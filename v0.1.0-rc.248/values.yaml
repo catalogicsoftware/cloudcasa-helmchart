@@ -54,7 +54,7 @@ limit_velero_cpu: 1
 request_kubeagent_memory: 32Mi
 request_kubeagent_cpu: 250m
 limit_kubeagent_memory: 64Mi
-limit_kubeagent_cpu: 1g
+limit_kubeagent_cpu: 1
 
 ## Placeholder configuration below this line ##
 imagePullSecrets: []

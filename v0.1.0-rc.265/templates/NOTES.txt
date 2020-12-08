@@ -1,0 +1,12 @@
+
+Please be patient while the chart is being deployed
+
+Tip:
+
+  Watch the deployment status using the command: kubectl get pods -w --namespace {{ .Release.Namespace }} -l release={{ .Release.Name }}
+
+Check on Cloudcasa UI, the added cluster state should be ready. If the clutser state is in Pending, either wrong ClusterID has been provided. 
+
+To upgrade this helm chart:
+
+Rancher Web UI highlights a available upgrade version. CLicking the same we can upgrade the installed release.

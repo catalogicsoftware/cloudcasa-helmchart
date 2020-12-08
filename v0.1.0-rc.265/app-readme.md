@@ -10,11 +10,11 @@ This chart bootstraps a kube-agent deployment on a client Kuberntes [Kubernetes]
 
 ```
 1. Register the cloudcasa helm chart repo in the Rancher Apps Repository
-2. Go to charts select the repo -> Cloudcasa-app chart.
-3. Provide the name of release. 
-4. In cloudcasa setting section, provide the AMDS_CLUSTER_ID and the AMDS_CLUSTER_TYPE
+2. Go to charts select the repo -> Cloudcasa-kubeagnet chart.
+3. Provide the name of release.
+4. In cloudcasa configuration section, provide the AMDS_CLSTER_ID.
 5. Click on Install button
 ```
 
-## Upgrade Notes
-Can upgrade the existing/deployed helm release with the new helm chart version
+## Changelog
+### v0.1.0-rc.265

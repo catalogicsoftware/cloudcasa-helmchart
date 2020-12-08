@@ -1,50 +1,62 @@
-# Default values for cloudcasa-register.
-# This is a YAML-formatted file.
-# Declare variables to be passed into your templates.
+## Global Docker image parameters
+## Please, note that this will override the image parameters, including dependencies, configured to use the global value
+## Current available global Docker image parameters: imageRegistry
+##
 
-replicaCount: 1
-
-AMDS_CLUSTER_ID: 5fc4bb45fe755d6ed9e77551
-#AMDS_CLUSTER_TYPE: production
-
+## Verlero csi plugin image
+## ref: https://hub.docker.com/r/velero/velero-plugin-for-csi/tags/
 velero_csi_plugin_image:
   registry: docker.io
   repository: catalogicsoftware/velero-plugin-for-csi
   tag: v0.1.2.1
   pullPolicy: IfNotPresent
   debug: false
+##
 
+## Velero aws plugin image
+## ref: https://hub.docker.com/r/velero/velero-plugin-for-aws/tags/
 velero_aws_plugin_image:
   registry: docker.io
   repository: velero/velero-plugin-for-aws
   tag: v1.1.0
   pullPolicy: IfNotPresent
   debug: false
-  
+##
+
+## Velero image
+## ref: https://hub.docker.com/r/velero/velero/tags
 velero_image:
   registry: docker.io
   repository: velero/velero
   tag: v1.5.2
   pullPolicy: IfNotPresent
   debug: false
+##
 
+## Cloudcasa kubeagent image
+## ref: https://hub.docker.com/r/catalogicsoftware/amds-kagent/tags/
 kagent_image:
   registry: docker.io
   repository: catalogicsoftware/amds-kagent
-  tag: 0.1.0-rc.248
+  tag: 0.1.0-rc.265
   pullPolicy: IfNotPresent
   debug: false
+##
 
+## Cloudcasa AMDS Cluster ID. To be provided by the user  
+AMDS_CLUSTER_ID: ""
+
+## Resources to be used by velero and kubeagent pods 
 request_velero_memory: 128Mi
 request_velero_cpu: 500m
-limit_velero_memory: 512Mi
+limit_velero_memory: 1g
 limit_velero_cpu: 1
 request_kubeagent_memory: 32Mi
 request_kubeagent_cpu: 250m
 limit_kubeagent_memory: 64Mi
-limit_kubeagent_cpu: 500m
+limit_kubeagent_cpu: 1g
 
-# Placeholder configuration below this line
+## Placeholder configuration below this line ##
 imagePullSecrets: []
 nameOverride: ""
 fullnameOverride: ""
@@ -74,3 +86,4 @@ nodeSelector: {}
 tolerations: []
 
 affinity: {}
+##

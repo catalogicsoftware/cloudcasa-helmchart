@@ -49,7 +49,7 @@ AMDS_CLUSTER_ID: ""
 ## Resources to be used by velero and kubeagent pods 
 request_velero_memory: 128Mi
 request_velero_cpu: 500m
-limit_velero_memory: 1g
+limit_velero_memory: 512Mi
 limit_velero_cpu: 1
 request_kubeagent_memory: 32Mi
 request_kubeagent_cpu: 250m

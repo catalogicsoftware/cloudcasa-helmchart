@@ -3,7 +3,7 @@ Cloudcasa is one of the most versatile SaaS solution to manage backups for your 
 
 ## Introduction
 
-This chart bootstraps a kube-agent deployment on a client Kuberntes [Kubernetes](http://kubernetes.io) cluster using the [Helm](https://helm.sh) package manager. This inturn registers the clienr Kubernetes clutser with Cloudcasa
+This chart bootstraps a kubeagent deployment on a client Kuberntes [Kubernetes](http://kubernetes.io) cluster using the [Helm](https://helm.sh) package manager. This inturn registers the client Kubernetes cluster with Cloudcasa
 
 ## Prerequisites
 
@@ -12,15 +12,16 @@ This chart bootstraps a kube-agent deployment on a client Kuberntes [Kubernetes]
 
 ## Helm Chart installation modes
 
-- CLI based installation
+###CLI based installation
 ##### Update the value of AMDS_CLUSTER_ID in the values.yaml file.
 
 ```bash
 1. helm repo add cloudcasa-repo https://catalogicsoftware.github.io/cloudcasa-kubeagent
 2. helm search repo cloudcasa-kubeagent
-3. helm install <release name> cloudcasa-repo/cloudcasa-kubeagent -f values.yaml
+3. Create a values.yaml with entry AMDS_CLUTSER_ID: <Cluster ID>
+4. helm install <release name> cloudcasa-repo/cloudcasa-kubeagent -f values.yaml
 ```
-- Helmchart hosted on Rancher Apps
+###Helmchart hosted on Rancher Apps
 
 ```
 1. Register the cloudcasa helm chart repo in the Rancher Apps Repository.
@@ -30,13 +31,10 @@ This chart bootstraps a kube-agent deployment on a client Kuberntes [Kubernetes]
 5. Click on Install button.
 ```
 
-## Uninstalling the Chart
+## Uninstalling the Chart on CLI
 
 To uninstall/delete the `my-release` deployment:
 
 ```bash
-$ helm delete my-release
+$ helm delete <release name>
 ```
-
-## Upgrade Notes
-Can upgrade the existing/deployed helm release with the new helm chart version

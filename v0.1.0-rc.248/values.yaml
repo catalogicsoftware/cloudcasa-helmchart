@@ -38,7 +38,7 @@ velero_image:
 kagent_image:
   registry: docker.io
   repository: catalogicsoftware/amds-kagent
-  tag: 0.1.0-rc.265
+  tag: 0.1.0-rc.248
   pullPolicy: IfNotPresent
   debug: false
 ##
@@ -49,12 +49,12 @@ AMDS_CLUSTER_ID: ""
 ## Resources to be used by velero and kubeagent pods 
 request_velero_memory: 128Mi
 request_velero_cpu: 500m
-limit_velero_memory: 1g
+limit_velero_memory: 512Mi
 limit_velero_cpu: 1
 request_kubeagent_memory: 32Mi
 request_kubeagent_cpu: 250m
 limit_kubeagent_memory: 64Mi
-limit_kubeagent_cpu: 1
+limit_kubeagent_cpu: 500m
 
 ## Placeholder configuration below this line ##
 imagePullSecrets: []

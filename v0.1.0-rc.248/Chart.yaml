@@ -1,6 +1,9 @@
 apiVersion: v2
-name: cloudcasa-app
-description: Helm chart for Kubernetes to register cloudcasa Kubeagent
+name: cloudcasa-kubeagent
+version: 0.1.0-rc.248
+appVersion: 0.1.0-rc.248
+description: Register a client Kubernetes cluster to cloudcasa by running a kubeagent on Client cluster. 
 type: application
-version: 0.1.248
-appVersion: 0.1.248
+maintainers:
+  - name: Catalogicsoftware
+    email: ""

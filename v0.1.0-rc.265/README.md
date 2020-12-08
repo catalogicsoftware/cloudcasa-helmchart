@@ -12,7 +12,7 @@ This chart bootstraps a kubeagent deployment on a client Kuberntes [Kubernetes](
 
 ## Helm Chart installation modes
 
-- CLI based installation
+###CLI based installation
 ##### Update the value of AMDS_CLUSTER_ID in the values.yaml file.
 
 ```bash
@@ -21,7 +21,7 @@ This chart bootstraps a kubeagent deployment on a client Kuberntes [Kubernetes](
 3. Create a values.yaml with entry AMDS_CLUTSER_ID: <Cluster ID>
 4. helm install <release name> cloudcasa-repo/cloudcasa-kubeagent -f values.yaml
 ```
-- Helmchart hosted on Rancher Apps
+###Helmchart hosted on Rancher Apps
 
 ```
 1. Register the cloudcasa helm chart repo in the Rancher Apps Repository.

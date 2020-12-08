@@ -3,7 +3,7 @@ labels:
   #rancher_min_version: 2.3.0
   #rancher_max_version: 2.x
 categories:
-- Application 
+- Application
 questions:
 - variable: AMDS_CLUSTER_ID
   default: ""

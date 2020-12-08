@@ -6,7 +6,7 @@ Cloudcasa is one of the most versatile SaaS solution to manage backups for your 
 This chart bootstraps a kube-agent deployment on a client Kuberntes [Kubernetes](http://kubernetes.io) cluster using the [Helm](https://helm.sh) package manager.
 
 ## Installation
-###Helmchart hosted on Rancher Apps
+### Helmchart hosted on Rancher Apps
 
 ```
 1. Register the cloudcasa helm chart repo in the Rancher Apps Repository

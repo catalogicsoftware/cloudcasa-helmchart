@@ -7,8 +7,8 @@ categories:
 questions:
 - variable: AMDS_CLUSTER_ID
   default: ""
-  description: "Cloudcasa Cluster ID"
+  description: "CloudCasa Cluster ID"
   type: string
   required: true
   label: AMDS_CLUSTER_ID
-  group: "Cloudcasa Configuration"
+  group: "CloudCasa Configuration"

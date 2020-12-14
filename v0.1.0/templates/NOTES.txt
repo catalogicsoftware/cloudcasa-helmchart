@@ -8,5 +8,5 @@ Monitor the Cloudcasa UI, the regsitered cluster state should be ready. If the c
 
 To upgrade the existing helm chart, execute the below commands
 ==============================================================
-- helm list -> This commands helps to list the already available helm objects or releases. Cloudcasa-kubeagent Chart object should be listed.
-- helm upgrade <Chart Object Name> cloudcasa-kubeagent/cloudcasa-kubeagent --set AMDS_CLUSTER_ID=<CLUSTER ID VALUE>
+- helm list -> This commands helps to list the already available helm objects or releases. Cloudcasa-helmchart Chart object should be listed.
+- helm upgrade <Chart Object Name> cloudcasa-repo/cloudcasa-helmchart --set AMDS_CLUSTER_ID=<CLUSTER ID VALUE>

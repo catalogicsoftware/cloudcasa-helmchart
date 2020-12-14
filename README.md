@@ -9,6 +9,6 @@ This chart bootstraps a kube-agent deployment on a client Kuberntes [Kubernetes]
 ##### Update the value of AMDS_CLUSTER_ID in the values.yaml file.
 
 ```
-1. helm repo add cloudcasa-repo https://catalogicsoftware.github.io/cloudcasa-kubeagent
-2. helm install <Chart Object Name> cloudcasa-repo/cloudcasa-kubeagent --set AMDS_CLUSTER_ID=<CLUSTER ID VALUE>
+1. helm repo add cloudcasa-repo https://catalogicsoftware.github.io/cloudcasa-helmchart
+2. helm install <Chart Object Name> cloudcasa-repo/cloudcasa-helmchart --set AMDS_CLUSTER_ID=<CLUSTER ID VALUE>
 ```

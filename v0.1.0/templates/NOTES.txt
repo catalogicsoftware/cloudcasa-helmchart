@@ -1,12 +1,6 @@
-===================================================================
 --------Please be patient while the chart is being deployed--------
 
-**Tip**
+*Tip*
 Watch the deployment status using the command: kubectl get pods -w --namespace {{ .Release.Namespace }} -l release={{ .Release.Name }}
 
 Monitor the Cloudcasa UI, the regsitered cluster state should be ready. If the clutser state is in Pending, wrong ClusterID would have been provided.
-
-To upgrade the existing helm chart, execute the below commands
-==============================================================
-- helm list -> This commands helps to list the already available helm objects or releases. Cloudcasa-helmchart Chart object should be listed.
-- helm upgrade <Chart Object Name> cloudcasa-repo/cloudcasa-helmchart --set AMDS_CLUSTER_ID=<CLUSTER ID VALUE>

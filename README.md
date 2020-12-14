@@ -14,7 +14,6 @@ This chart bootstraps a kube-agent deployment on a client Kuberntes [Kubernetes]
 ```
 
 ### Upgrade steps
-=================
 1. ```helm list``` -> This commands helps to list the already available helm objects or releases. Cloudcasa-helmchart Chart object should be listed.
 2. ```helm upgrade <Chart Object Name> cloudcasa-repo/cloudcasa-helmchart --set AMDS_CLUSTER_ID=<CLUSTER ID VALUE>```
 

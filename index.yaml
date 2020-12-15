@@ -1,0 +1,16 @@
+apiVersion: v1
+entries:
+  cloudcasa-helmchart:
+  - apiVersion: v2
+    appVersion: 0.1.0
+    created: "2020-12-15T21:38:34.579016933+05:30"
+    description: Register a client Kubernetes cluster to cloudcasa by running a kubeagent
+      on Client cluster.
+    digest: d7bfe3b07a8ad0775e5274e37d054f2f133d711deb6a9d17a354f395f7f98019
+    maintainers:
+    - name: Catalogicsoftware
+    name: cloudcasa-helmchart
+    urls:
+    - https://github.com/catalogicsoftware/cloudcasa-helmchart/releases/download/cloudcasa-helmchart-0.1.0/cloudcasa-helmchart-0.1.0.tgz
+    version: 0.1.0
+generated: "2020-12-15T21:38:34.192244295+05:30"

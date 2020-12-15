@@ -2902,8 +2902,8 @@ spec:
             memory: "{{ .Values.limit_kubeagent_memory }}"
             cpu: "{{ .Values.limit_kubeagent_cpu }}"
         env:
-        - name: AMDS_CLUSTER_ID
-          value: "{{ .Values.AMDS_CLUSTER_ID }}"
+        - name: cluster_id
+          value: "{{ .Values.cluster_id }}"
         volumeMounts:
         - mountPath: /credentials
           name: cloud-credentials

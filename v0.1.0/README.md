@@ -17,7 +17,7 @@ This chart installs and configures the CloudCasa agent on a [Kubernetes](http://
 2. Execute the following helm commands:
 ```
   helm repo add cloudcasa-repo https://catalogicsoftware.github.io/cloudcasa-helmchart
-  helm install cloudcasa.io cloudcasa-repo/cloudcasa-helmchart --set AMDS_CLUSTER_ID=<Cluster ID>
+  helm install cloudcasa.io cloudcasa-repo/cloudcasa-helmchart --set cluster_id=<Cluster ID>
 ```
 
 ## Uninstall
@@ -26,7 +26,7 @@ To uninstall/delete the `cloudcasa.io` deployment:
 
 ```
   helm delete cloudcasa.io
+```
 
 ## Upgrade steps
-1. ```helm list``` -> This commands helps to list the already available helm objects or releases. Cloudcasa-helmchart Chart object should be listed.
-2. ```helm upgrade cloudcasa.io cloudcasa-repo/cloudcasa-helmchart --set AMDS_CLUSTER_ID=<CLUSTER ID VALUE>```
+```helm upgrade cloudcasa.io cloudcasa-repo/cloudcasa-helmchart --set cluster_id=<CLUSTER ID>```

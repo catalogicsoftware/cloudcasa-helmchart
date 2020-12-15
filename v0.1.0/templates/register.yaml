@@ -2902,7 +2902,7 @@ spec:
             memory: "{{ .Values.limit_kubeagent_memory }}"
             cpu: "{{ .Values.limit_kubeagent_cpu }}"
         env:
-        - name: cluster_id
+        - name: AMDS_CLUSTER_ID
           value: "{{ .Values.cluster_id }}"
         volumeMounts:
         - mountPath: /credentials

@@ -29,4 +29,6 @@ To uninstall/delete the `cloudcasa.io` deployment:
 ```
 
 ## Upgrade steps
-```helm upgrade cloudcasa.io cloudcasa-repo/cloudcasa-helmchart --set cluster_id=<CLUSTER ID>```
+```
+helm upgrade cloudcasa.io cloudcasa-repo/cloudcasa-helmchart --set cluster_id=<CLUSTER ID>
+```

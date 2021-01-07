@@ -1,6 +1,5 @@
 --------Please be patient while the chart is being deployed--------
 
-*Tip*
-Watch the deployment status using the command: kubectl get pods -w --namespace {{ .Release.Namespace }} -l release={{ .Release.Name }}
+Tip: Watch the App deployment status using the command: kubectl get pods -n cloudcasa-io
 
-Monitor the Cloudcasa UI, the regsitered cluster state should be ready. If the clutser state is in Pending, wrong ClusterID would have been provided.
+Monitor the Cloudcasa UI, the regsitered cluster state should be moved to Ready State. If the clutser state is still in Pendingstate, wrong ClusterID would have been provided.

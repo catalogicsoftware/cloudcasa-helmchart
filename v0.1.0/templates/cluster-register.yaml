@@ -16,10 +16,14 @@
 # kubectl delete namespace/cloudcasa-io clusterrolebinding/cloudcasa-io
 # kubectl delete crds -l component=kubeagent_backup_helper
 
+{{ if not (lookup "v1" "Namespace" .Values.namespace "cloudcasa-io") }}
+
 apiVersion: v1
 kind: Namespace
 metadata:
   name: cloudcasa-io
+
+{{ end }}
 ---
 apiVersion: v1
 items:

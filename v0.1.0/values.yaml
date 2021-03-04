@@ -41,15 +41,15 @@ velero_image:
 kagent_image:
   registry: docker.io
   repository: catalogicsoftware/amds-kagent
-  tag: 0.1.0-rc.265
+  tag: 0.1.0-rc.515
   pullPolicy: IfNotPresent
   debug: false
 ##
 
-## Cloudcasa AMDS Cluster ID. To be provided by the user  
+## Cloudcasa AMDS Cluster ID. To be provided by the user
 cluster_id: ""
 
-## Resources to be used by velero and kubeagent pods 
+## Resources to be used by velero and kubeagent pods
 request_velero_memory: 128Mi
 request_velero_cpu: 500m
 limit_velero_memory: 512Mi

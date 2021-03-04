@@ -7,11 +7,11 @@ description: CloudCasa backup service for Kubernetes and cloud native applicatio
 home: https://cloudcasa.io
 icon: file://../logo.png
 #icon: https://raw.githubusercontent.com/catalogicsoftware/cloudcasa-helmchart/gh-pages/logo.png
-type: application
+#type: application
 keywords:
   - backup
   - Catalogic
   - CloudCasa
 maintainers:
-  - name: catalogic
+  - name: catalogicsoftware
     email: info@catalogicsoftware.com

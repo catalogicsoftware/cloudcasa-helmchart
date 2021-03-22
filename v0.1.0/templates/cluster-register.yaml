@@ -2288,6 +2288,7 @@ items:
     - name: v1
       served: true
       storage: true
+{{- if not (lookup "apiextensions.k8s.io/v1" "CustomResourceDefinition" "" "volumesnapshotlocations.velero.io") }}
 - apiVersion: apiextensions.k8s.io/v1beta1
   kind: CustomResourceDefinition
   metadata:
@@ -2348,6 +2349,7 @@ items:
     - name: v1
       served: true
       storage: true
+{{- end }}
 - apiVersion: v1
   kind: ServiceAccount
   metadata:
@@ -2373,6 +2375,7 @@ items:
     namespace: {{ .Values.namespace }}
 kind: List
 ---
+{{- if not (lookup "apiextensions.k8s.io/v1" "CustomResourceDefinition" "" "volumesnapshotclasses.snapshot.storage.k8s.io") }}
 apiVersion: apiextensions.k8s.io/v1beta1
 kind: CustomResourceDefinition
 metadata:
@@ -2456,7 +2459,9 @@ status:
     plural: ""
   conditions: []
   storedVersions: []
+{{- end }}
 ---
+{{- if not (lookup "apiextensions.k8s.io/v1" "CustomResourceDefinition" "" "volumesnapshotcontents.snapshot.storage.k8s.io") }}
 apiVersion: apiextensions.k8s.io/v1beta1
 kind: CustomResourceDefinition
 metadata:
@@ -2688,7 +2693,9 @@ status:
     plural: ""
   conditions: []
   storedVersions: []
+{{- end }}
 ---
+{{- if not (lookup "apiextensions.k8s.io/v1" "CustomResourceDefinition" "" "volumesnapshots.snapshot.storage.k8s.io") }}
 apiVersion: apiextensions.k8s.io/v1beta1
 kind: CustomResourceDefinition
 metadata:
@@ -2873,6 +2880,7 @@ status:
     plural: ""
   conditions: []
   storedVersions: []
+{{- end }}
 ---
 apiVersion: apps/v1
 kind: Deployment

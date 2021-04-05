@@ -2,7 +2,7 @@ apiVersion: v1
 entries:
   cloudcasa:
   - apiVersion: v2
-    appVersion: "1"
+    appVersion: "1.0"
     created: "2021-04-01T11:57:16.209080044+05:30"
     description: CloudCasa backup service for Kubernetes and cloud native applications
     digest: 2525efb6f0ff4306b1205f8727432bbd57cc41bef17f4e30a6a3086396feac77
@@ -19,7 +19,7 @@ entries:
     name: cloudcasa
     urls:
     - https://github.com/catalogicsoftware/cloudcasa-helmchart/releases/download/cloudcasa-1/cloudcasa-1.tgz
-    version: "1"
+    version: "1.0"
   - apiVersion: v2
     appVersion: 0.1.0
     created: "2021-03-05T18:47:52.276814401+05:30"

@@ -18,7 +18,7 @@ entries:
       name: catalogicsoftware
     name: cloudcasa
     urls:
-    - https://github.com/catalogicsoftware/cloudcasa-helmchart/releases/download/cloudcasa-1/cloudcasa-1.tgz
+    - https://github.com/catalogicsoftware/cloudcasa-helmchart/releases/download/cloudcasa-1.0/cloudcasa-1.0.tgz
     version: "1.0"
   - apiVersion: v2
     appVersion: 0.1.0

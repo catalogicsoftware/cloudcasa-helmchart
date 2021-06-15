@@ -49,7 +49,7 @@ velero_azure_plugin_image:
 velero_image:
   registry: docker.io
   repository: velero/velero
-  tag: v1.6
+  tag: v1.6.0
   pullPolicy: IfNotPresent
   debug: false
 ##

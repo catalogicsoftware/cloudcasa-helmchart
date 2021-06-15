@@ -38,7 +38,7 @@ velero_aws_plugin_image:
 ## Velero azure plugin image
 velero_azure_plugin_image:
   registry: docker.io
-  repository: velero-plugin-for-microsoft-azure
+  repository: velero/velero-plugin-for-microsoft-azure
   tag: v1.2.0
   pullPolicy: IfNotPresent
   debug: false

@@ -2532,7 +2532,6 @@ items:
           volumeMounts:
           - mountPath: /target
             name: plugins
-        - image: velero/velero-plugin-for-microsoft-azure:v1.2.0
         - image: "{{ .Values.velero_azure_plugin_image.repository }}:{{ .Values.velero_azure_plugin_image.tag }}"
           imagePullPolicy: IfNotPresent
           name: velero-plugin-for-microsoft-azure

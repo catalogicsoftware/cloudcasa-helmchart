@@ -2425,7 +2425,7 @@ items:
   - kind: ServiceAccount
     name: {{ .Release.Name }}
     namespace: {{ .Values.namespace }}
-
+---
 apiVersion: v1
 kind: List
 # This list contains namespace scoped resources required for CloudCasa operations

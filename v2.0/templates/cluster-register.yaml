@@ -2454,7 +2454,7 @@ items:
       spec:
         containers:
         - image: {{ .Values.kagent_image.repository }}:{{ .Values.kagent_image.tag }}
-          args: ["/usr/local/bin/kubeagent", "--server_addr", "agent.staging.cloudcasa.io:443", "--tls", "true"]
+          args: ["/usr/local/bin/kubeagent", "--server_addr", "agent.cloudcasa.io:443", "--tls", "true"]
           name: kubeagent
           resources:
             requests:

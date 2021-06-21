@@ -11,7 +11,7 @@ kind: Namespace
 metadata:
   name: cloudcasa-io
   annotations:
-    "helm.sh/resource-policy": retain
+    "helm.sh/resource-policy": keep
 
 {{ end }}
 ---

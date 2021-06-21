@@ -23,7 +23,7 @@ kind: Namespace
 metadata:
   name: cloudcasa-io
   annotations:
-    "helm.sh/resource-policy": retain
+    "helm.sh/resource-policy": keep
 
 {{ end }}
 ---
@@ -2296,6 +2296,7 @@ items:
   metadata:
     annotations:
       controller-gen.kubebuilder.io/version: v0.3.0
+      "helm.sh/resource-policy": keep
     creationTimestamp: null
     labels:
       component: kubeagent-backup-helper
@@ -2384,6 +2385,7 @@ metadata:
   annotations:
     controller-gen.kubebuilder.io/version: v0.3.0
     api-approved.kubernetes.io: "https://github.com/kubernetes-csi/external-snapshotter/pull/139"
+    "helm.sh/resource-policy": keep
   creationTimestamp: null
   name: volumesnapshotclasses.snapshot.storage.k8s.io
 spec:
@@ -2470,6 +2472,7 @@ metadata:
   annotations:
     controller-gen.kubebuilder.io/version: v0.3.0
     api-approved.kubernetes.io: "https://github.com/kubernetes-csi/external-snapshotter/pull/139"
+    "helm.sh/resource-policy": keep
   creationTimestamp: null
   name: volumesnapshotcontents.snapshot.storage.k8s.io
 spec:
@@ -2704,6 +2707,7 @@ metadata:
   annotations:
     controller-gen.kubebuilder.io/version: v0.3.0
     api-approved.kubernetes.io: "https://github.com/kubernetes-csi/external-snapshotter/pull/139"
+    "helm.sh/resource-policy": keep
   creationTimestamp: null
   name: volumesnapshots.snapshot.storage.k8s.io
 spec:

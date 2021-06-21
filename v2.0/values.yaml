@@ -20,7 +20,7 @@ velero_csi_plugin_image:
 velero_plugin_image:
   registry: docker.io
   repository: catalogicsoftware/amds-veleroplugin
-  tag: 0.0.1-rc.195
+  tag: 0.0.1-rc.251
   pullPolicy: IfNotPresent
   debug: false
 ##

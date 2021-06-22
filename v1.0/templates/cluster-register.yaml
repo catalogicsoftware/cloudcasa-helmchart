@@ -2442,11 +2442,11 @@ spec:
     served: true
     storage: true
 status:
-  # acceptedNames:
-  #   kind: "abc"
-  #   plural: "abc"
+  acceptedNames:
+    kind: ""
+    plural: ""
   conditions: []
-  # storedVersions: ["abc"]
+  storedVersions: [""]
 {{- end }}
 {{- if not (lookup "apiextensions.k8s.io/v1" "CustomResourceDefinition" "" "volumesnapshotcontents.snapshot.storage.k8s.io") }}
 apiVersion: apiextensions.k8s.io/v1beta1
@@ -2675,11 +2675,11 @@ spec:
     served: true
     storage: true
 status:
-  # acceptedNames:
-  #   kind: "abc"
-  #   plural: "abc"
+  acceptedNames:
+    kind: ""
+    plural: ""
   conditions: []
-  # storedVersions: ["abc"]
+  storedVersions: [""]
 {{- end }}
 {{- if not (lookup "apiextensions.k8s.io/v1" "CustomResourceDefinition" "" "volumesnapshots.snapshot.storage.k8s.io") }}
 apiVersion: apiextensions.k8s.io/v1beta1
@@ -2862,10 +2862,10 @@ spec:
     storage: true
 status:
   # acceptedNames:
-  #   kind: "abc"
-  #   plural: "abc"
+  #   kind: ""
+  #   plural: ""
   conditions: []
-  # storedVersions: ["abc"]
+  # storedVersions: [""]
 {{- end }}
 apiVersion: apps/v1
 kind: Deployment

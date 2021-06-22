@@ -3079,5 +3079,4 @@ items:
       # plural: ""
     conditions: []
     # storedVersions: []
-{{ end }}
----
+{{- end }}

@@ -2387,6 +2387,7 @@ items:
       served: true
       storage: true
 {{- end }}
+---
 apiVersion: v1
 kind: List
 # This list contains RBAC resources required for Backup Operations
@@ -2424,6 +2425,7 @@ items:
   - kind: ServiceAccount
     name: {{ .Release.Name }}
     namespace: {{ .Values.namespace }}
+---
 apiVersion: v1
 kind: List
 # This list contains namespace scoped resources required for CloudCasa operations
@@ -2562,6 +2564,7 @@ items:
           name: scratch
         - emptyDir: {}
           name: cloud-credentials
+---
 apiVersion: v1
 kind: List
 # This list contains Custom Resource Defintions required to support v1beta1 snapshotter API

@@ -5,17 +5,16 @@
 # kubectl delete crds -l component=kubeagent_backup_helper
 
 {{ if not (lookup "v1" "Namespace" .Values.namespace "cloudcasa-io") }}
-
 apiVersion: v1
 kind: Namespace
 metadata:
   name: cloudcasa-io
   annotations:
     "helm.sh/resource-policy": keep
-
 {{ end }}
 ---
 apiVersion: v1
+kind: List
 items:
 - apiVersion: apiextensions.k8s.io/v1beta1
   kind: CustomResourceDefinition
@@ -2284,7 +2283,6 @@ items:
   metadata:
     annotations:
       controller-gen.kubebuilder.io/version: v0.3.0
-      #      "helm.sh/resource-policy": keep
     creationTimestamp: null
     labels:
       component: kubeagent-backup-helper
@@ -2364,7 +2362,6 @@ items:
   - kind: ServiceAccount
     name: {{ .Release.Name }}
     namespace: {{ .Values.namespace }}
-kind: List
 ---
 {{- if not (lookup "apiextensions.k8s.io/v1" "CustomResourceDefinition" "" "volumesnapshotclasses.snapshot.storage.k8s.io") }}
 apiVersion: apiextensions.k8s.io/v1beta1
@@ -2373,7 +2370,6 @@ metadata:
   annotations:
     controller-gen.kubebuilder.io/version: v0.3.0
     api-approved.kubernetes.io: "https://github.com/kubernetes-csi/external-snapshotter/pull/139"
-    #  "helm.sh/resource-policy": keep
   creationTimestamp: null
   name: volumesnapshotclasses.snapshot.storage.k8s.io
 spec:
@@ -2452,7 +2448,6 @@ status:
   conditions: []
   storedVersions: []
 {{- end }}
----
 {{- if not (lookup "apiextensions.k8s.io/v1" "CustomResourceDefinition" "" "volumesnapshotcontents.snapshot.storage.k8s.io") }}
 apiVersion: apiextensions.k8s.io/v1beta1
 kind: CustomResourceDefinition
@@ -2460,7 +2455,6 @@ metadata:
   annotations:
     controller-gen.kubebuilder.io/version: v0.3.0
     api-approved.kubernetes.io: "https://github.com/kubernetes-csi/external-snapshotter/pull/139"
-    #    "helm.sh/resource-policy": keep
   creationTimestamp: null
   name: volumesnapshotcontents.snapshot.storage.k8s.io
 spec:
@@ -2687,13 +2681,11 @@ status:
   conditions: []
   storedVersions: []
 {{- end }}
----
 {{- if not (lookup "apiextensions.k8s.io/v1" "CustomResourceDefinition" "" "volumesnapshots.snapshot.storage.k8s.io") }}
 apiVersion: apiextensions.k8s.io/v1beta1
 kind: CustomResourceDefinition
 metadata:
   annotations:
-          #    "helm.sh/resource-policy": keep
     controller-gen.kubebuilder.io/version: v0.3.0
     api-approved.kubernetes.io: "https://github.com/kubernetes-csi/external-snapshotter/pull/139"
   creationTimestamp: null
@@ -2875,7 +2867,6 @@ status:
   conditions: []
   storedVersions: []
 {{- end }}
----
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -2972,20 +2963,6 @@ spec:
         volumeMounts:
         - mountPath: /target
           name: plugins
-#      - image: velero/velero-plugin-for-gcp:v1.1.0
-#        imagePullPolicy: IfNotPresent
-#        name: velero-plugin-for-gcp
-#        resources: {}
-#        volumeMounts:
-#        - mountPath: /target
-#          name: plugins
-#      - image: velero/velero-plugin-for-microsoft-azure:v1.1.1
-#        imagePullPolicy: IfNotPresent
-#        name: velero-plugin-for-microsoft-azure
-#        resources: {}
-#        volumeMounts:
-#        - mountPath: /target
-#          name: plugins
       - image: "{{ .Values.velero_csi_plugin_image.repository }}:{{ .Values.velero_csi_plugin_image.tag }}"
         imagePullPolicy: IfNotPresent
         name: velero-plugin-for-csi

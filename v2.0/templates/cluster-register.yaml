@@ -2900,7 +2900,6 @@ items:
   kind: CustomResourceDefinition
   metadata:
     annotations:
-      # "helm.sh/resource-policy": keep
       controller-gen.kubebuilder.io/version: v0.3.0
       api-approved.kubernetes.io: "https://github.com/kubernetes-csi/external-snapshotter/pull/139"
     creationTimestamp: null

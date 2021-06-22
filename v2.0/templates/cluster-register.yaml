@@ -2324,7 +2324,8 @@ items:
     versions:
     - name: v1
       served: true
-      storage: true
+      storiage: true
+{{- if not (lookup "apiextensions.k8s.io/v1" "CustomResourceDefinition" "" "volumesnapshotlocations.velero.io") }}
 - apiVersion: apiextensions.k8s.io/v1beta1
   kind: CustomResourceDefinition
   metadata:
@@ -2385,11 +2386,13 @@ items:
     - name: v1
       served: true
       storage: true
+{{- end }}
 ---
 apiVersion: v1
 kind: List
 # This list contains RBAC resources required for Backup Operations
 items:
+{{- if not (lookup "v1" "Namespace" .Values.namespace "cloudcasa-io") }}
 - apiVersion: v1
   kind: Namespace
   metadata:
@@ -2398,6 +2401,7 @@ items:
       component: kubeagent-backup-helper
     name: cloudcasa-io
   spec: {}
+{{- end }}
 - apiVersion: v1
   kind: ServiceAccount
   metadata:
@@ -2568,6 +2572,7 @@ kind: List
 # snaphsotter CRDs fail on some platforms, the kubeagent and other essential resources would 
 # have already installed and started operations.
 items:
+{{- if not (lookup "apiextensions.k8s.io/v1" "CustomResourceDefinition" "" "volumesnapshotclasses.snapshot.storage.k8s.io") }}
 - apiVersion: apiextensions.k8s.io/v1beta1
   kind: CustomResourceDefinition
   metadata:
@@ -2651,6 +2656,8 @@ items:
       plural: ""
     conditions: []
     storedVersions: []
+{{- end }}
+{{- if not (lookup "apiextensions.k8s.io/v1" "CustomResourceDefinition" "" "volumesnapshotcontents.snapshot.storage.k8s.io") }}
 - apiVersion: apiextensions.k8s.io/v1beta1
   kind: CustomResourceDefinition
   metadata:
@@ -2882,6 +2889,8 @@ items:
       plural: ""
     conditions: []
     storedVersions: []
+{{- end }}
+{{- if not (lookup "apiextensions.k8s.io/v1" "CustomResourceDefinition" "" "volumesnapshots.snapshot.storage.k8s.io") }}
 - apiVersion: apiextensions.k8s.io/v1beta1
   kind: CustomResourceDefinition
   metadata:

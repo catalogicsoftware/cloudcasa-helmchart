@@ -2331,6 +2331,7 @@ items:
   metadata:
     annotations:
       controller-gen.kubebuilder.io/version: v0.3.0
+      "helm.sh/resource-policy": keep
     creationTimestamp: null
     labels:
       component: kubeagent-backup-helper
@@ -2396,6 +2397,8 @@ items:
 - apiVersion: v1
   kind: Namespace
   metadata:
+    annotations:
+    "helm.sh/resource-policy": keep
     creationTimestamp: null
     labels:
       component: kubeagent-backup-helper
@@ -2579,6 +2582,7 @@ items:
     annotations:
       controller-gen.kubebuilder.io/version: v0.3.0
       api-approved.kubernetes.io: "https://github.com/kubernetes-csi/external-snapshotter/pull/139"
+      "helm.sh/resource-policy": keep
     creationTimestamp: null
     name: volumesnapshotclasses.snapshot.storage.k8s.io
   spec:
@@ -2664,6 +2668,7 @@ items:
     annotations:
       controller-gen.kubebuilder.io/version: v0.3.0
       api-approved.kubernetes.io: "https://github.com/kubernetes-csi/external-snapshotter/pull/139"
+      "helm.sh/resource-policy": keep
     creationTimestamp: null
     name: volumesnapshotcontents.snapshot.storage.k8s.io
   spec:
@@ -2897,6 +2902,7 @@ items:
     annotations:
       controller-gen.kubebuilder.io/version: v0.3.0
       api-approved.kubernetes.io: "https://github.com/kubernetes-csi/external-snapshotter/pull/139"
+      "helm.sh/resource-policy": keep
     creationTimestamp: null
     name: volumesnapshots.snapshot.storage.k8s.io
   spec:

@@ -3074,5 +3074,6 @@ items:
       kind: ""
       plural: ""
     conditions: []
-    storedVersions: []
+   i storedVersions: []
+{{- end }}
 ---

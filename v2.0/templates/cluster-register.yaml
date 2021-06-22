@@ -2398,7 +2398,7 @@ items:
   kind: Namespace
   metadata:
     annotations:
-    "helm.sh/resource-policy": keep
+      "helm.sh/resource-policy": keep
     creationTimestamp: null
     labels:
       component: kubeagent-backup-helper
@@ -2900,9 +2900,9 @@ items:
   kind: CustomResourceDefinition
   metadata:
     annotations:
+      "helm.sh/resource-policy": keep
       controller-gen.kubebuilder.io/version: v0.3.0
       api-approved.kubernetes.io: "https://github.com/kubernetes-csi/external-snapshotter/pull/139"
-      "helm.sh/resource-policy": keep
     creationTimestamp: null
     name: volumesnapshots.snapshot.storage.k8s.io
   spec:

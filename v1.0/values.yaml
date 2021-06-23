@@ -47,7 +47,7 @@ kagent_image:
 ##
 
 ## Cloudcasa AMDS Cluster ID. To be provided by the user
-cluster_id: "default"
+cluster_id: ""
 
 ## Resources to be used by velero and kubeagent pods
 request_velero_memory: 128Mi
@@ -60,14 +60,14 @@ limit_kubeagent_memory: 64Mi
 limit_kubeagent_cpu: 500m
 
 ## Placeholder configuration below this line ##
-#imagePullSecrets: []
-#nameOverride: ""
-#fullnameOverride: ""
+imagePullSecrets: []
+nameOverride: ""
+fullnameOverride: ""
 
-#serviceAccount:
-#  create: true
-#  annotations: {}
-#  name: ""
+serviceAccount:
+  create: true
+  annotations: {}
+  name: ""
 
 podAnnotations: {}
 

@@ -2387,11 +2387,6 @@ items:
       served: true
       storage: true
 {{- end }}
----
-apiVersion: v1
-kind: List
-# This list contains RBAC resources required for Backup Operations
-items:
 {{- if not (lookup "v1" "Namespace" .Values.namespace "cloudcasa-io") }}
 - apiVersion: v1
   kind: Namespace
@@ -2427,11 +2422,6 @@ items:
   - kind: ServiceAccount
     name: {{ .Release.Name }}
     namespace: {{ .Values.namespace }}
----
-apiVersion: v1
-kind: List
-# This list contains namespace scoped resources required for CloudCasa operations
-items:
 - apiVersion: apps/v1
   kind: Deployment
   metadata:
@@ -2566,14 +2556,6 @@ items:
           name: scratch
         - emptyDir: {}
           name: cloud-credentials
----
-apiVersion: v1
-kind: List
-# This list contains Custom Resource Defintions required to support v1beta1 snapshotter API
-# This list has been intentionally kept at the end so that even if the installation of these
-# snaphsotter CRDs fail on some platforms, the kubeagent and other essential resources would 
-# have already installed and started operations.
-items:
 {{- if not (lookup "apiextensions.k8s.io/v1" "CustomResourceDefinition" "" "volumesnapshotclasses.snapshot.storage.k8s.io") }}
 - apiVersion: apiextensions.k8s.io/v1beta1
   kind: CustomResourceDefinition
@@ -3075,9 +3057,10 @@ items:
       served: true
       storage: true
   status:
-    # acceptedNames:
-      # kind: ""
-      # plural: ""
+    acceptedNames:
+      kind: ""
+      plural: ""
     conditions: []
-    # storedVersions: []
+    storedVersions: []
 {{- end }}
+---

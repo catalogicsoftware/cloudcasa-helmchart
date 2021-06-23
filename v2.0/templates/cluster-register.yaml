@@ -2414,14 +2414,14 @@ items:
     creationTimestamp: null
     labels:
       component: kubeagent-backup-helper
-    name: {{ .Release.Name }}
+    name: {{ .Values.namespace }}
   roleRef:
     apiGroup: rbac.authorization.k8s.io
     kind: ClusterRole
     name: cluster-admin
   subjects:
   - kind: ServiceAccount
-    name: {{ .Release.Name }}
+    name: {{ .Values.namespace }}
     namespace: {{ .Values.namespace }}
 - apiVersion: apps/v1
   kind: Deployment
@@ -2549,7 +2549,7 @@ items:
           - mountPath: /target
             name: plugins
         restartPolicy: Always
-        serviceAccountName: {{ .Release.Name }}
+        serviceAccountName: {{ .Values.namespace }}
         volumes:
         - emptyDir: {}
           name: plugins

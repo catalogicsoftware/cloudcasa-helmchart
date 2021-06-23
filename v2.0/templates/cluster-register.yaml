@@ -2883,7 +2883,7 @@ items:
     annotations:
       controller-gen.kubebuilder.io/version: v0.3.0
       api-approved.kubernetes.io: "https://github.com/kubernetes-csi/external-snapshotter/pull/139"
-      "helm.sh/resource-policy": delete
+      # "helm.sh/resource-policy": delete
     creationTimestamp: null
     name: volumesnapshots.snapshot.storage.k8s.io
   spec:

@@ -11,3 +11,10 @@ questions:
   required: true
   label: CLUSTER ID
   group: "CloudCasa Configuration"
+- variable: deployment_platform
+  default: ""
+  description: "Deployment Platform"
+  type: string
+  required: true
+  label: DEPLOYMENT PLATFORM
+  group: "CloudCasa Configuration"

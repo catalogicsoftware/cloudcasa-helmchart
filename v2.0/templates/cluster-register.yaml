@@ -2467,7 +2467,8 @@ items:
             value: {{ .Values.kagent_image.repository }}:{{ .Values.kagent_image.tag }}
           - name: DEPLOYMENT_PLATFORM
             #            value: {{ default .Values.deployment_platform "yaml" }}
-            value: {{ if .Values.deployment_platform }}{{ .Values.deployment_platform }}{{ else }}"yaml"{{ end }}
+            # value: {{ if .Values.deployment_platform }}{{ .Values.deployment_platform }}{{ else }}"yaml"{{ end }}
+            value: {{ .Values.deployment_platform }}
           volumeMounts:
           - mountPath: /credentials
             name: cloud-credentials

@@ -2466,7 +2466,7 @@ items:
           - name: KUBEMOVER_IMAGE
             value: {{ .Values.kagent_image.repository }}:{{ .Values.kagent_image.tag }}
           - name: DEPLOYMENT_PLATFORM
-            value: "yaml"
+            value: {{ .Values.deployment_platform }}
           volumeMounts:
           - mountPath: /credentials
             name: cloud-credentials

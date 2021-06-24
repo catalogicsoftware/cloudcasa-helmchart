@@ -7,7 +7,7 @@
 namespace: cloudcasa-io
 
 ## Required deployment_platform
-deployment_platform: yaml
+deployment_platform: ""
 
 ## Velero csi plugin image
 ## ref: https://hub.docker.com/r/velero/velero-plugin-for-csi/tags/

@@ -12,7 +12,7 @@ questions:
   label: CLUSTER ID
   group: "CloudCasa Configuration"
 - variable: deployment_platform
-  default: ""
+  default: "Rancher"
   description: "Deployment Platform"
   type: string
   required: true

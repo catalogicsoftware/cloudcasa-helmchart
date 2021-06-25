@@ -2468,7 +2468,9 @@ items:
           - name: DEPLOYMENT_PLATFORM
             #value: {{ default "helm" .Values.deployment_platform }}
             {{ if (lookup "v1" "Namespace" "" "cattle-system") }}
-            value: "Rancher"
+            value: "rancher"
+            {{ else if (lookup "v1" "Namespace" "" "nirmata") }}
+            value: "nirmata"
             {{ else }}
             value: {{ default "helm" .Values.deployment_platform }}
             {{ end }}

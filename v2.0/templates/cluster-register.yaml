@@ -2466,7 +2466,12 @@ items:
           - name: KUBEMOVER_IMAGE
             value: {{ .Values.kagent_image.repository }}:{{ .Values.kagent_image.tag }}
           - name: DEPLOYMENT_PLATFORM
+            #value: {{ default "helm" .Values.deployment_platform }}
+            {{ if (lookup "v1" "Namespace" "" "cattle-system") }}
+            value: "Rancher"
+            {{ else }}
             value: {{ default "helm" .Values.deployment_platform }}
+            {{ end }}
           volumeMounts:
           - mountPath: /credentials
             name: cloud-credentials

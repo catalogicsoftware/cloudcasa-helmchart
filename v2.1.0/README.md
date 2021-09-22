@@ -20,8 +20,8 @@ See the CloudCasa [Getting Started Guide](https://cloudcasa.io/get-started) for 
 ### Rancher Installation (Apps & Marketplace)
 
 1. Log in to https://home.cloudcasa.io and add your Kubernetes cluster under the Protection tab. Note the returned cluster ID.
-2. Go to Apps & Marketplace in the Rancher UI. In the Deploy Chart section, check the Partners checkbox and click on the cloudcasa chart.
-3. Provide a Name (e.g. CloudCasa) and optional description.
+2. Go to Apps & Marketplace in the Rancher UI. In the Deploy Chart section, check the Partners checkbox and click on the CloudCasa chart.
+3. Provide a Name (e.g. Cloudcasa) and optional description.
 4. In the CloudCasa Configuration section, provide the Cluster ID obtained above.
 5. Click on the Install button to complete installation of the agent.
 

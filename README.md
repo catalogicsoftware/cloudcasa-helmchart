@@ -27,7 +27,7 @@ See the CloudCasa [Getting Started Guide](https://cloudcasa.io/get-started) for 
 
 ### Helm CLI Installation
 
-1. Log in to https://home.cloudcasa.io and add your Kubernetes cluster under the Setup tab. Note the returned cluster ID.
+1. Log in to https://home.cloudcasa.io and add your Kubernetes cluster under the Protection tab. Note the returned cluster ID.
 2. Execute the following helm commands, replacing ```<ClusterID>``` with the Cluster ID obtained above:
 ```
 $ helm repo add cloudcasa-repo https://catalogicsoftware.github.io/cloudcasa-helmchart
@@ -36,7 +36,7 @@ $ helm install cloudcasa.io cloudcasa-repo/cloudcasa --set cluster_id=<Cluster I
 This will install the CloudCasa agent and complete registration of the cluster with the CloudCasa service.
 
 ## Updating the CloudCasa Agent
-1. Log in to https://home.cloudcasa.io and obtain the cluster ID for your cluster by selecting it under the Setup tab.
+1. Log in to https://home.cloudcasa.io and obtain the cluster ID for your cluster by selecting it under the Protection tab.
 2. Execute the following commands to update the agent:
 ```
 $ helm repo update

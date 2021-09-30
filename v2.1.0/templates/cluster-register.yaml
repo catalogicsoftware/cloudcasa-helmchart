@@ -2386,6 +2386,8 @@ items:
 - apiVersion: v1
   kind: Namespace
   metadata:
+    annotations:
+      "helm.sh/resource-policy": keep
     creationTimestamp: null
     labels:
       component: kubeagent-backup-helper

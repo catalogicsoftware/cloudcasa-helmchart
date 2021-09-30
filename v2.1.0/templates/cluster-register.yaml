@@ -2987,10 +2987,12 @@ items:
     conditions: []
     storedVersions: []
 {{- end }}
+{{- if not (lookup "apiextensions.k8s.io/v1" "CustomResourceDefinition" "" "volumesnapshots.snapshot.storage.k8s.io") }}
 - apiVersion: apiextensions.k8s.io/v1
   kind: CustomResourceDefinition
   metadata:
     annotations:
+      "helm.sh/resource-policy": delete
       controller-gen.kubebuilder.io/version: v0.4.0
       api-approved.kubernetes.io: "https://github.com/kubernetes-csi/external-snapshotter/pull/419"
     creationTimestamp: null
@@ -3216,4 +3218,5 @@ items:
       plural: ""
     conditions: []
     storedVersions: []
+{{- end }}
 ---

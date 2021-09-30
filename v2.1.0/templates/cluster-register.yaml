@@ -2987,7 +2987,6 @@ items:
     conditions: []
     storedVersions: []
 {{- end }}
-{{- if not (lookup "apiextensions.k8s.io/v1beta1" "CustomResourceDefinition" "" "volumesnapshots.snapshot.storage.k8s.io") }}
 {{- if not (lookup "apiextensions.k8s.io/v1" "CustomResourceDefinition" "" "volumesnapshots.snapshot.storage.k8s.io") }}
 - apiVersion: apiextensions.k8s.io/v1
   kind: CustomResourceDefinition
@@ -3219,4 +3218,4 @@ items:
     conditions: []
     storedVersions: []
 {{- end }}
-{{- end }}
+---

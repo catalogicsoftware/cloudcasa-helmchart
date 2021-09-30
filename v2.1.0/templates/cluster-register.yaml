@@ -2438,7 +2438,7 @@ items:
       spec:
         containers:
         - image: catalogicsoftware/amds-kagent:2.1.0-prod.104
-          args: ["/usr/local/bin/kubeagent", "--server_addr", "agent.staging.cloudcasa.io:443", "--tls", "true"]
+          args: ["/usr/local/bin/kubeagent", "--server_addr", "agent.cloudcasa.io:443", "--tls", "true"]
           name: kubeagent
           resources:
             requests:

@@ -2440,7 +2440,7 @@ items:
           prometheus.io/scrape: "true"
       spec:
         containers:
-        - image: catalogicsoftware/amds-kagent:2.1.0-prod.104
+        - image: catalogicsoftware/amds-kagent:2.1.0-prod.112
           args: ["/usr/local/bin/kubeagent", "--server_addr", "agent.cloudcasa.io:443", "--tls", "true"]
           name: kubeagent
           resources:
@@ -2458,7 +2458,7 @@ items:
           - name: AMDS_CLUSTER_ID
             value: {{ .Values.cluster_id }}
           - name: KUBEMOVER_IMAGE
-            value: catalogicsoftware/amds-kagent:2.1.0-prod.104
+            value: catalogicsoftware/amds-kagent:2.1.0-prod.112
           - name: DEPLOYMENT_PLATFORM
             {{ if (lookup "v1" "Namespace" "" "cattle-system") }}
             value: "rancher"
@@ -2476,7 +2476,7 @@ items:
             name: plugins
           - mountPath: /scratch
             name: scratch
-        - image: velero/velero:v1.7.0-rc.2
+        - image: velero/velero:v1.7.0
           imagePullPolicy: IfNotPresent
           name: kubeagent-backup-helper
           args:
@@ -2539,7 +2539,7 @@ items:
   #        volumeMounts:
   #        - mountPath: /target
   #          name: plugins
-        - image: velero/velero-plugin-for-microsoft-azure:v1.3.0-rc.1
+        - image: velero/velero-plugin-for-microsoft-azure:v1.3.0
           imagePullPolicy: IfNotPresent
           name: velero-plugin-for-microsoft-azure
           resources: {}
@@ -2553,7 +2553,7 @@ items:
           volumeMounts:
           - mountPath: /target
             name: plugins
-        - image: catalogicsoftware/amds-veleroplugin:0.0.1-rc.562
+        - image: catalogicsoftware/amds-veleroplugin:2.1.0-prod.7
           imagePullPolicy: IfNotPresent
           name: backup-helper-plugin
           resources: {}

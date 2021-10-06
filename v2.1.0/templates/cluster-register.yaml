@@ -2440,7 +2440,7 @@ items:
           prometheus.io/scrape: "true"
       spec:
         containers:
-        - image: catalogicsoftware/amds-kagent:2.1.0-prod.112
+        - image: catalogicsoftware/amds-kagent:2.1.0-prod.113
           args: ["/usr/local/bin/kubeagent", "--server_addr", "agent.cloudcasa.io:443", "--tls", "true"]
           name: kubeagent
           resources:
@@ -2458,7 +2458,7 @@ items:
           - name: AMDS_CLUSTER_ID
             value: {{ .Values.cluster_id }}
           - name: KUBEMOVER_IMAGE
-            value: catalogicsoftware/amds-kagent:2.1.0-prod.112
+            value: catalogicsoftware/amds-kagent:2.1.0-prod.113
           - name: DEPLOYMENT_PLATFORM
             {{ if (lookup "v1" "Namespace" "" "cattle-system") }}
             value: "rancher"

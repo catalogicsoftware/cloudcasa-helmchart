@@ -1,4 +1,4 @@
-# Manifest created on 2021-02-15
+# Manifest created on 2023-04-3
 # -----------------------------------------------------------------------
 #   Steps to delete CloudCasa from the cluster are:
 # -----------------------------------------------------------------------
@@ -57,7 +57,8 @@ items:
     selector:
       matchLabels:
         app: cloudcasa-kubeagent-manager
-    strategy: {}
+    strategy:
+      type: Recreate
     replicas: 1
     template:
       metadata:
@@ -98,6 +99,7 @@ items:
             value: "helm"
             {{ end }}
         restartPolicy: Always
+        terminationGracePeriodSeconds: 0
         serviceAccountName: cloudcasa-io
         volumes:        
         - emptyDir: {}

@@ -2,6 +2,29 @@ apiVersion: v1
 entries:
   cloudcasa:
   - apiVersion: v2
+    appVersion: 3.4.1
+    created: "2023-07-11T17:22:10.760230414+05:30"
+    description: CloudCasa backup service for Kubernetes and cloud native applications.
+      Offering CloudCasa Pro and CloudCasa for Velero services.
+    digest: 55dd2a610d3245c9ece1b5dac1f518dc502e517eff636b9b3fdf7a1de8612106
+    home: https://cloudcasa.io
+    icon: https://raw.githubusercontent.com/catalogicsoftware/cloudcasa-helmchart/gh-pages/logo.png
+    keywords:
+    - backup
+    - restore
+    - migration
+    - catalogic
+    - cloudcasa
+    - velero
+    kubeVersion: '>=1.17.0-0'
+    maintainers:
+    - email: support@cloudcasa.io
+      name: catalogicsoftware
+    name: cloudcasa
+    urls:
+    - https://github.com/catalogicsoftware/cloudcasa-helmchart/releases/download/cloudcasa-3.4.1/cloudcasa-3.4.1.tgz
+    version: 3.4.1
+  - apiVersion: v2
     appVersion: 3.4.0
     created: "2023-06-26T19:39:09.915088552+05:30"
     description: CloudCasa backup service for Kubernetes and cloud native applications.
@@ -203,4 +226,4 @@ entries:
     urls:
     - https://github.com/catalogicsoftware/cloudcasa-helmchart/releases/download/cloudcasa-0.1.0/cloudcasa-0.1.0.tgz
     version: 0.1.0
-generated: "2023-06-26T19:39:09.91527032+05:30"
+generated: "2023-07-11T17:22:10.760373634+05:30"

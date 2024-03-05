@@ -29,7 +29,7 @@ For help using the repository, contact CloudCasa support (support@cloudcasa.io).
     $ helm repo update
     $ helm install cloudcasa.io cloudcasa-repo/cloudcasa --set cluster_id=<Cluster ID>
     ```
-This will install the CloudCasa agent and complete registration of the cluster with the CloudCasa service.
+    This will install the CloudCasa agent and complete registration of the cluster with the CloudCasa service.
 
 ### Updating the CloudCasa Agent
 1. Log in to https://home.cloudcasa.io and obtain the cluster ID for your cluster by selecting it under the Protection tab.

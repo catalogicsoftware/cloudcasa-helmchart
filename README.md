@@ -13,7 +13,7 @@ CloudCasa provides two types of backup services for Kubernetes:
 Whether you are managing existing Velero installations or using the advanced Pro features, with CloudCasa you don't need to be a storage or data protection expert to back up and restore your Kubernetes clusters.
 
 This Helm repository contains Helm charts for installing the CloudCasa agent on Kubernetes.
-For help using the repository contact, CloudCasa support (support@cloudcasa.io).
+For help using the repository, contact CloudCasa support (support@cloudcasa.io).
 
 ## Prerequisites
 
@@ -49,4 +49,5 @@ This will install the CloudCasa agent and complete registration of the cluster w
     $ helm uninstall cloudcasa.io
     $ kubectl delete namespace/cloudcasa-io clusterrolebinding/cloudcasa-io
     ```
+
 *CloudCasa is a trademark of Catalogic Software Inc.*

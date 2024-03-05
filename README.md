@@ -1,8 +1,6 @@
 # CloudCasa Helm Repository
 
-[CloudCasa](https://cloudcasa.io) - Leader in Kubernetes Data Protection and Application Resiliency
-
-# Introduction
+[**CloudCasa**](https://cloudcasa.io) - *Leader in Kubernetes Data Protection and Application Resiliency*
 
 CloudCasa is a SaaS data protection, disaster recovery, and migration solution for Kubernetes and cloud-native applications. Configuration is quick and easy, and the basic service is free.
 
@@ -13,12 +11,8 @@ CloudCasa provides two types of backup services for Kubernetes:
 Whether you are managing existing Velero installations or using the advanced Pro features, with CloudCasa you don't need to be a storage or data protection expert to back up and restore your Kubernetes clusters.
 
 This Helm repository contains Helm charts for installing the CloudCasa agent on Kubernetes.
+
 For help using the repository, contact CloudCasa support (support@cloudcasa.io).
-
-## Prerequisites
-
-1. Kubernetes 1.20+
-2. Helm 3.0+
 
 ## Using the CloudCasa Agent Helm chart
 

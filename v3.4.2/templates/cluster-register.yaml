@@ -1,10 +1,4 @@
 # Manifest created on 2024-03-1
-# -----------------------------------------------------------------------
-#   Steps to delete CloudCasa from the cluster are:
-# -----------------------------------------------------------------------
-# kubectl delete namespace/cloudcasa-io clusterrolebinding/cloudcasa-io
-# kubectl delete crds -l component=kubeagent_backup_helper
-# -----------------------------------------------------------------------
 
 apiVersion: v1
 kind: List

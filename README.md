@@ -20,14 +20,14 @@ For help using the repository, contact CloudCasa support (support@cloudcasa.io).
 
 ### Installing the CloudCasa Agent
 1. Log in to https://home.cloudcasa.io and add your Kubernetes cluster under the Protection tab. Note the returned cluster ID.
-2. Add the CloudCasa Helm repo to your Helm configuration if it hasn't been added already.
+2. Add the CloudCasa Helm repo to your Helm configuration, if it hasn't been added already.
    ```
    $ helm repo add cloudcasa-repo https://catalogicsoftware.github.io/cloudcasa-helmchart
    ```
 4. To install the agent, execute the following helm commands, replacing ```<ClusterID>``` with the Cluster ID obtained above:
     ```
     $ helm repo update
-    $ helm install cloudcasa.io cloudcasa-repo/cloudcasa --set cluster_id=<Cluster ID>
+    $ helm install cloudcasa cloudcasa-repo/cloudcasa --set cluster_id=<Cluster ID>
     ```
     This will install the CloudCasa agent and complete registration of the cluster with the CloudCasa service.
 
@@ -36,14 +36,13 @@ For help using the repository, contact CloudCasa support (support@cloudcasa.io).
 2. Execute the following commands to update the agent:
     ```
     $ helm repo update
-    $ helm upgrade cloudcasa.io cloudcasa-repo/cloudcasa --set cluster_id=<Cluster ID>
+    $ helm upgrade cloudcasa cloudcasa-repo/cloudcasa --set cluster_id=<Cluster ID>
     ```
 
 ### Uninstalling the CloudCasa Agent
 1. Execute the following commands to uninstall CloudCasa.
     ```    
-    $ helm uninstall cloudcasa.io
-    $ kubectl delete namespace/cloudcasa-io clusterrolebinding/cloudcasa-io
+    $ helm uninstall cloudcasa
     ```
 
 *CloudCasa is a trademark of Catalogic Software Inc.*

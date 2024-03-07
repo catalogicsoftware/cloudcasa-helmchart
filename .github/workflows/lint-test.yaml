@@ -27,7 +27,7 @@ jobs:
       - name: Run chart-testing (list-changed)
         id: list-changed
         run: |
-          changed=$(ct list-changed --target-branch main --chart-dirs .)
+          changed=$(ct list-changed --target-branch main --chart-dirs ../..)
           if [[ -n "$changed" ]]; then
             echo "changed=true" >> "$GITHUB_OUTPUT"
           fi

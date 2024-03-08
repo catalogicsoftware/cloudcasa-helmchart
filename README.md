@@ -16,13 +16,18 @@ The basic Helm chart is also fed into several downstream repositories for specif
 * Digital Ocean 1-Click Marketplace
 * Nirmata
 
+## Branches
+
+* The main (default) branch contains the Helm chart source
+* The gh-pages branch contains the source for the Helm repo
+
 ## Updating/Publishing the Helm Chart
 
 Multiple versions of the Helm chart can and do exist at the same time in both the github repo and the Helm repo. Existing versions of the Helm chart should generally not be modified. Instead, a new version should be created whenever changes are required.
 
 To create a new version, copy the sub-directory tree for the latest version (e.g. v3.4.0) to a new one (e.g. v3.4.1) and make any needed modifications to the files in the new one. Then commit the changes to a new branch off of main and create a PR. Github actions have been configured to test charts using the Helm chart-testing tool when a PR is created.
 
-When a PR is merged into the main branch, an action should be triggered to package the new chart for the Helm repo, update the repo index, and publish it. A release should also be created.
+When a PR containing a new chart is merged into the main branch, an action will be triggered to package the new chart for the Helm repo, update the repo index, and publish it. A release and corresponding tag should also be created.
 
 The Helm repo is published using GitHub Pages from the gh-pages branch in the cloudcasa-helmchart repo to https://catalogicsoftware.github.io/cloudcasa-helmchart/. Any changes to the Helm repo not handled by automation, such as updates to the README or logo files, should be submitted as PRs to the gh-pages branch.
 

@@ -4,7 +4,7 @@
 
 # Introduction
 
-CloudCasa is a SaaS data protection, disaster recovery, and migration solution for Kubernetes and cloud-native applications. Configuration is quick and easy, and the basic service is free.
+CloudCasa is a SaaS data protection, disaster recovery, and migration solution for Kubernetes and cloud-native applications. Configuration is quick and easy, and basic service is free.
 
 CloudCasa provides two types of backup services for Kubernetes: 
 * **CloudCasa Pro** provides centralized backup services for large, complex, multi-cluster, multi-cloud, and hybrid cloud environments. It includes multi-cloud account integration, managed backup storage, and advanced cross-cloud recovery.
@@ -21,16 +21,8 @@ See the CloudCasa [Getting Started Guide](https://cloudcasa.io/get-started) for 
 2. Helm 3.0+
 
 ## Installation
-
-### Rancher Installation (Apps & Marketplace)
-
-1. Log in to https://home.cloudcasa.io and add your Kubernetes cluster under the Protection tab. Note the returned cluster ID.
-2. Go to Apps & Marketplace in the Rancher UI. In the Chart section, check the Partners checkbox and click on the CloudCasa chart.
-3. Provide a Name (e.g. CloudCasa) and optional description.
-4. In the CloudCasa Configuration section, provide the Cluster ID obtained above.
-5. Click on the Install button to complete installation of the agent. If upgrading, click on Upgrade version instead to upgrade the existing helmchart.
  
-### Helm CLI Installation
+### Installing the CloudCasa Agent
 
 1. Log in to https://home.cloudcasa.io and add your Kubernetes cluster under the Protection tab. Note the returned cluster ID.
 2. Execute the following helm commands, replacing ```<ClusterID>``` with the Cluster ID obtained above:

@@ -1,9 +1,8 @@
-# Manifest created on 2024-03-1
-
+---
+# This list contains the CloudCasa Agent Manager and RBAC resources 
+# required to deploy the Cloudcasa agent.
 apiVersion: v1
 kind: List
-# This list contains Cloudcasa Agent Manager and RBAC resources 
-# required to deploy the Cloudcasa Kube Agent
 items:
 {{- if not (lookup "v1" "Namespace" "cloudcasa-io" "cloudcasa-io") }}
 - apiVersion: v1
@@ -98,4 +97,3 @@ items:
         volumes:        
         - emptyDir: {}
           name: scratch
----

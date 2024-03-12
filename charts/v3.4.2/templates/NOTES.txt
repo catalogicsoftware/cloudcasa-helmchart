@@ -1,6 +1,8 @@
 Please be patient while the CloudCasa agent is being deployed. It may take several minutes.
 
-Once the agent completes startup, the state shown for the cluster in the CloudCasa Clusters/Overview page (https://home.cloudcasa.io/clusters/overview) will change to "Active".
+Once the agent completes startup, the state shown for the cluster in the CloudCasa Clusters/Overview
+page (https://home.cloudcasa.io/clusters/overview) will change to "Active".
 If the cluster stays in the "Registered" or "Pending" state, you may have provided the wrong ClusterID.
 
 Tip: You can watch the agent deployment status using the command: kubectl get pods -n cloudcasa-io
+

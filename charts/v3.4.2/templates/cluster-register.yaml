@@ -3,6 +3,8 @@
 # required to deploy the Cloudcasa agent.
 apiVersion: v1
 kind: List
+metadata:
+  name: cloudcasa-agent
 items:
 {{- if not (lookup "v1" "Namespace" "cloudcasa-io" "cloudcasa-io") }}
 - apiVersion: v1

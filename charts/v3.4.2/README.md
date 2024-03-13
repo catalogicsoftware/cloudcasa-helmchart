@@ -34,7 +34,7 @@ See the CloudCasa [Getting Started Guide](https://cloudcasa.io/get-started) for 
 This will install the CloudCasa agent and complete registration of the cluster with the CloudCasa service.
 
 ## Updating the CloudCasa Agent
-1. Log in to https://home.cloudcasa.io and obtain the cluster ID for your cluster by selecting it under the Protection tab.
+1. Log in to https://home.cloudcasa.io and obtain the cluster ID for your cluster by selecting it under the Protection tab. You can also obtain the current setting for it with the command ```helm get values cloudcasa```.
 2. Execute the following commands to update the agent:
     ```
     $ helm repo update

@@ -1,0 +1,18 @@
+apiVersion: v2
+name: cloudcasa
+version: "3.4.2"
+appVersion: "3.1.0"
+kubeVersion: ">=1.20.0-0"
+description: CloudCasa backup service for Kubernetes and cloud-native applications. Offering CloudCasa Pro and CloudCasa Velero management services.
+home: https://cloudcasa.io
+icon: https://raw.githubusercontent.com/catalogicsoftware/cloudcasa-helmchart/gh-pages/logo.png
+keywords:
+  - backup
+  - restore
+  - migration
+  - catalogic
+  - cloudcasa
+  - velero
+maintainers:
+  - name: CloudCasa Support
+    email: support@cloudcasa.io

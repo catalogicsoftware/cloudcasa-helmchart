@@ -1,9 +1,11 @@
 apiVersion: v2
 name: cloudcasa
-version: "3.4.2"
+version: "3.4.3"
 appVersion: "3.1.0"
 kubeVersion: ">=1.20.0-0"
-description: CloudCasa backup service for Kubernetes and cloud-native applications. Offering CloudCasa Pro and CloudCasa Velero management services.
+description: CloudCasa backup and migration service for Kubernetes and cloud-native applications.
+annotations:
+  charts.openshift.io/name: CloudCasa Agent
 home: https://cloudcasa.io
 icon: https://raw.githubusercontent.com/catalogicsoftware/cloudcasa-helmchart/gh-pages/logo.png
 keywords:

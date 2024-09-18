@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: "cloudcasa-test-agent"
+  annotations:
+    "helm.sh/hook": test
+spec:
+  containers:
+    - name: kubeagentmanager-test
+      image: catalogicsoftware/amds-kagent:3.1.0-prod
+      command: ['curl']
+      args: ['']
+  restartPolicy: Never

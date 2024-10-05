@@ -59,7 +59,7 @@ items:
           app: cloudcasa-kubeagent-manager
       spec:
         containers:
-        - image: catalogicsoftware/amds-kagent:3.1.0-prod
+        - image: registry.connect.redhat.com/catalogicsoftware/cloudcasa-amds-kagent:3.5.7
           args: ["/usr/local/bin/kubeagentmanager", "--server_addr", "agent.cloudcasa.io:443", "--tls", "true"]
           name: kubeagentmanager
           resources:
@@ -80,7 +80,7 @@ items:
           - name: AMDS_CLUSTER_ID
             value: {{ .Values.cluster_id }}
           - name: KUBEMOVER_IMAGE
-            value: catalogicsoftware/amds-kagent:3.1.0-prod
+            value: registry.connect.redhat.com/catalogicsoftware/cloudcasa-amds-kagent:3.5.7
           - name: DEPLOYMENT_PLATFORM
             {{ if (lookup "v1" "Namespace" "" "cattle-system") }}
             value: "rancher"

@@ -84,10 +84,6 @@ items:
           - name: DEPLOYMENT_PLATFORM
             {{ if (lookup "v1" "Namespace" "" "cattle-system") }}
             value: "rancher"
-            {{ else if (lookup "v1" "Namespace" "" "nirmata") }}
-            value: "nirmata"
-            {{ else if (lookup "v1" "Namespace" "" "rafay-system") }}
-            value: "rafay"
             {{ else }}
             value: "helm"
             {{ end }}

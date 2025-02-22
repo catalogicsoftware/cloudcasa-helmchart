@@ -8,7 +8,7 @@ metadata:
 spec:
   containers:
     - name: kubeagentmanager-test
-      image: registry.connect.redhat.com/catalogicsoftware/cloudcasa-amds-kagent:3.5.7
+      image: catalogicsoftware/amds-kagent:3.1.0-prod
       command: ["bin/bash", "-c"]
       args:
         - kubectl get deployment cloudcasa-kubeagent-manager

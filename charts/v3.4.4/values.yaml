@@ -1,2 +1,4 @@
-## CloudCasa Cluster ID. To be provided by the user.
-cluster_id: ""
+# clusterID is the CloudCasa Cluster ID. To be provided by the user.
+clusterID: ""
+# repository is the container repo for the agent manager image
+repository: "docker.io/catalogicsoftware/amds-kagent"

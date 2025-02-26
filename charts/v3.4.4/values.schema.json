@@ -1,11 +1,18 @@
 {
   "$schema": "https://json-schema.org/draft-07/schema#",
   "properties": {
-    "cluster_id": {
+    "clusterID": {
       "description": "Cluster ID",
+      "type": "string"
+    },
+    "repository": {
+      "description": "Container repository",
       "type": "string"
     }
   },
+  "required": [
+    "repository"
+  ],
   "title": "Values",
   "type": "object"
 }

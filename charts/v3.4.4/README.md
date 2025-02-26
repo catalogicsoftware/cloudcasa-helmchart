@@ -32,7 +32,7 @@ See the CloudCasa [Getting Started Guide](https://cloudcasa.io/get-started) for 
 3. To install the agent, execute the following helm commands, replacing ```<Cluster ID>``` with the Cluster ID obtained above:
     ```
     $ helm repo update
-    $ helm install cloudcasa cloudcasa-repo/cloudcasa --set cluster_id=<Cluster ID>
+    $ helm install cloudcasa cloudcasa-repo/cloudcasa --set clusterID=<Cluster ID>
     ```
 This will install the CloudCasa agent and complete registration of the cluster with the CloudCasa service.
 
@@ -41,7 +41,7 @@ This will install the CloudCasa agent and complete registration of the cluster w
 2. Execute the following commands to update the agent, replacing ```<Cluster ID>``` with the Cluster ID obtained above:
     ```
     $ helm repo update
-    $ helm upgrade cloudcasa cloudcasa-repo/cloudcasa --set cluster_id=<Cluster ID>
+    $ helm upgrade cloudcasa cloudcasa-repo/cloudcasa --set clusterID=<Cluster ID>
     ```
 
 ### Uninstalling the CloudCasa Agent

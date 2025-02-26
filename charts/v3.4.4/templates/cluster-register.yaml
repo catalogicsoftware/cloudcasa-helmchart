@@ -58,8 +58,12 @@ items:
         labels:
           app: cloudcasa-kubeagent-manager
       spec:
+        {{ if .Values.imagePullSecret }}
+        imagePullSecrets:
+          - name: {{ .Values.imagePullSecret | quote }}
+        {{ end }}
         containers:
-        - image: "{{ .Values.repository }}:3.1.0-prod"
+        - image: "{{ .Values.repository }}:{{ .Values.tag }}"
           args: ["/usr/local/bin/kubeagentmanager", "--server_addr", "agent.cloudcasa.io:443", "--tls", "true"]
           name: kubeagentmanager
           resources:
@@ -80,7 +84,7 @@ items:
           - name: AMDS_CLUSTER_ID
             value: {{ .Values.clusterID }}
           - name: KUBEMOVER_IMAGE
-            value: catalogicsoftware/amds-kagent:3.1.0-prod
+            value: {{ .Values.repository }}:{{ .Values.tag }}
           - name: DEPLOYMENT_PLATFORM
             {{ if (lookup "v1" "Namespace" "" "cattle-system") }}
             value: "rancher"

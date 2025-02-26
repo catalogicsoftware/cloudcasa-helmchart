@@ -6,9 +6,13 @@ metadata:
   annotations:
     "helm.sh/hook": test
 spec:
+  {{ if .Values.imagePullSecret }}
+  imagePullSecrets:
+    - name: {{ .Values.imagePullSecret | quote }}
+  {{ end }}
   containers:
     - name: kubeagentmanager-test
-      image: catalogicsoftware/amds-kagent:3.1.0-prod
+      image: {{ .Values.repository }}:{{ .Values.tag }}
       command: ["bin/bash", "-c"]
       args:
         - kubectl get deployment cloudcasa-kubeagent-manager

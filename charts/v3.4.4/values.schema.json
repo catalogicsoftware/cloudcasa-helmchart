@@ -8,10 +8,19 @@
     "repository": {
       "description": "Container repository",
       "type": "string"
+    },
+    "tag": {
+      "description": "Container version tag",
+      "type": "string"
+    },
+    "imagePullSecret": {
+      "description": "Name of secret to use for image registry credentials",
+      "type": ["string", "null"]
     }
   },
   "required": [
-    "repository"
+    "repository",
+    "tag"
   ],
   "title": "Values",
   "type": "object"

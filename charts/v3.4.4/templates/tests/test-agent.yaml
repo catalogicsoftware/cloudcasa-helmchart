@@ -12,7 +12,7 @@ spec:
   {{ end }}
   containers:
     - name: kubeagentmanager-test
-      image: {{ .Values.repository }}:{{ .Values.tag }}
+      image: {{ .Values.image.repository }}:{{ .Values.image.tag }}
       command: ["bin/bash", "-c"]
       args:
         - kubectl get deployment cloudcasa-kubeagent-manager

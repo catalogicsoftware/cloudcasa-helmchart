@@ -49,4 +49,19 @@ This will install the CloudCasa agent and complete registration of the cluster w
     ```    
     $ helm uninstall cloudcasa
     ```
+###Using an alternate image repository
+
+The agent manager container can be installed from an alternate repository by setting values for image.repository and image.tag.
+Add the options --set image.repository=<repository> and/or --set image.tag=<tag> to the helm install command.
+
+Note that the alternate repository will also need to be set for the cluster in CloudCasa so that all agent containers will be loaded from it.
+See the [CloudCasa User Guide](https://docs.cloudcasa.io/help/cluster-add.html) for more information.
+
+If the registry you are using requires authentication, you can define a Kubernetes secret with the authentication information
+and reference it by setting a value for imagePullSecret. Example: "--set imagePullSecret=registrySecret".
+See the [Kubernetes Docs](https://kubernetes.io/docs/tasks/configure-pod-container/pull-image-private-registry/) for more information.
+
+Note that the secret name will also need to be set for the cluster in CloudCasa so that it will be used for all agent containers.
+See the [CloudCasa User Guide](https://docs.cloudcasa.io/help/cluster-add.html) for more information.
+
 *CloudCasa is a trademark of Catalogic Software Inc.*

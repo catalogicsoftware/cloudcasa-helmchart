@@ -8,4 +8,3 @@ image:
 
 # imagePullSecret is the name of the secret to use for image registry credentials (optional)
 imagePullSecret:
-

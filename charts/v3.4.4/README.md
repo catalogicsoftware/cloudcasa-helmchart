@@ -24,7 +24,7 @@ See the CloudCasa [Getting Started Guide](https://cloudcasa.io/get-started) for 
  
 ### Installing the CloudCasa Agent
 
-1. Log in to https://home.cloudcasa.io and add your Kubernetes cluster under the Protection tab. Note the returned cluster ID.
+1. Log in to https://home.cloudcasa.io and add your Kubernetes cluster under Clusters/Overview. Note the returned cluster ID.
 2. Add the CloudCasa Helm repo to your Helm configuration, if it hasn't been added already.
    ```
    $ helm repo add cloudcasa-repo https://catalogicsoftware.github.io/cloudcasa-helmchart
@@ -37,7 +37,7 @@ See the CloudCasa [Getting Started Guide](https://cloudcasa.io/get-started) for 
 This will install the CloudCasa agent and complete registration of the cluster with the CloudCasa service.
 
 ### Updating the CloudCasa Agent
-1. Log in to https://home.cloudcasa.io and obtain the cluster ID for your cluster by selecting it under the Protection tab. You can also obtain the current setting for it with the command ```helm get values cloudcasa```.
+1. Log in to https://home.cloudcasa.io and obtain the cluster ID for your cluster by selecting it under Clusters/Overview. You can also obtain the current setting for it with the command ```helm get values cloudcasa```.
 2. Execute the following commands to update the agent, replacing ```<Cluster ID>``` with the Cluster ID obtained above:
     ```
     $ helm repo update
@@ -64,4 +64,4 @@ See the [Kubernetes Docs](https://kubernetes.io/docs/tasks/configure-pod-contain
 Note that the secret name will also need to be set for the cluster in CloudCasa so that it will be used for all agent containers.
 See the [CloudCasa User Guide](https://docs.cloudcasa.io/help/cluster-add.html) for more information.
 
-*CloudCasa is a trademark of Catalogic Software Inc.*
+*CloudCasa is a trademark of Catalogic Software, Inc.*

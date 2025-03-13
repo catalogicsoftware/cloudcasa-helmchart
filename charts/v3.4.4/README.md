@@ -60,8 +60,10 @@ See the [CloudCasa User Guide](https://docs.cloudcasa.io/help/cluster-add.html) 
 If the registry you are using requires authentication, you can define a Kubernetes secret with the authentication information
 and reference it by setting a value for imagePullSecret. Example: "--set imagePullSecret=registrySecret".
 See the [Kubernetes Docs](https://kubernetes.io/docs/tasks/configure-pod-container/pull-image-private-registry/) for more information.
+Note that the secret must be created in the cloudcasa-io namespace, so you may need to create the namespace first.
+Also note that when uninstalling the agent, you may need to delete the cloudcasa-io namespace manually after running helm uninstall with "kubectl delete namespace cloudcasa-io".
 
-Note that the secret name will also need to be set for the cluster in CloudCasa so that it will be used for all agent containers.
+Finally, the secret name will also need to be set in CloudCasa for the cluster, so that it will be used for all agent containers.
 See the [CloudCasa User Guide](https://docs.cloudcasa.io/help/cluster-add.html) for more information.
 
 *CloudCasa is a trademark of Catalogic Software, Inc.*

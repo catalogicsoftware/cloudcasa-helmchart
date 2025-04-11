@@ -49,7 +49,13 @@ This will install the CloudCasa agent and complete registration of the cluster w
     ```    
     $ helm uninstall cloudcasa
     ```
-###Using an alternate image repository
+
+2. If you manually created the cloudcasa-io namespace in order to supply a container registry authentication secret (see below),
+you may need to manually delete the namesapce after uninstall with the command `kubectl delete namespace cloudcasa-io`.
+
+3. CloudCasa creates some custom resource definitions on installation, which you can remove manually with the command `kubectl delete crd -l component=kubeagent-backup-helper`.
+
+### Using an alternate image repository
 
 The agent manager container can be installed from an alternate repository by setting values for image.repository and image.tag.
 Add the options --set image.repository=<repository> and/or --set image.tag=<tag> to the helm install command.

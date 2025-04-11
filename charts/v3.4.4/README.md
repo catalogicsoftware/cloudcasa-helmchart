@@ -51,7 +51,7 @@ This will install the CloudCasa agent and complete registration of the cluster w
     ```
 
 2. If you manually created the cloudcasa-io namespace in order to supply a container registry authentication secret (see below),
-you may need to manually delete the namesapce after uninstall with the command `kubectl delete namespace cloudcasa-io`.
+you may need to manually delete the namespace after uninstall with the command `kubectl delete namespace cloudcasa-io`.
 
 3. CloudCasa creates some custom resource definitions on installation, which you can remove manually with the command `kubectl delete crd -l component=kubeagent-backup-helper`.
 

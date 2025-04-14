@@ -1,6 +1,6 @@
 # CloudCasa Helm Repository
 
-[**CloudCasa**](https://cloudcasa.io) - *Leader in Kubernetes Data Protection and Application Resiliency*
+[**CloudCasa**](https://cloudcasa.io) - *Leader in Kubernetes Data Protection and Application Resilience*
 
 CloudCasa is a SaaS data protection, disaster recovery, migration, and replication solution for Kubernetes and cloud-native applications. Configuration is quick and easy, and the basic service is free.
 

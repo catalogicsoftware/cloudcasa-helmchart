@@ -1,6 +1,6 @@
 # CloudCasa Kubernetes Agent
 
-[CloudCasa](https://cloudcasa.io) - Leader in Kubernetes Data Protection and Application Resiliency
+[CloudCasa](https://cloudcasa.io) - Leader in Kubernetes Data Protection and Application Resilience
 
 # Introduction
 

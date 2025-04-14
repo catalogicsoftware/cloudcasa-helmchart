@@ -1,6 +1,6 @@
 # CloudCasa Helm Repository
 
-[**CloudCasa**](https://cloudcasa.io) - *Leader in Kubernetes Data Protection and Application Resiliency*
+[**CloudCasa**](https://cloudcasa.io) - *Leader in Kubernetes Data Protection and Application Resilience*
 
 CloudCasa is a SaaS data protection, disaster recovery, migration, and replication solution for Kubernetes and cloud-native applications. Configuration is quick and easy, and the basic service is free.
 
@@ -14,12 +14,12 @@ Whether you are managing existing Velero installations or using the advanced Pro
 
 This Helm repository contains Helm charts for installing the CloudCasa agent on Kubernetes.
 
-For help using the repository, contact CloudCasa support (support@cloudcasa.io).
+For help using the repository, see the [CloudCasa Helm chart documentation](https://docs.cloudcasa.io/help/agent-helm.html) or contact CloudCasa support (support@cloudcasa.io).
 
-## Using the CloudCasa Agent Helm chart
+## Using the CloudCasa Agent Helm chart - The brief version
 
 ### Installing the CloudCasa Agent
-1. Log in to https://home.cloudcasa.io and add your Kubernetes cluster under the Protection tab. Note the returned cluster ID.
+1. Log in to https://home.cloudcasa.io and add your Kubernetes cluster under the Clusters tab. Note the returned cluster ID.
 2. Add the CloudCasa Helm repo to your Helm configuration, if it hasn't been added already.
    ```
    $ helm repo add cloudcasa-repo https://catalogicsoftware.github.io/cloudcasa-helmchart
@@ -27,7 +27,7 @@ For help using the repository, contact CloudCasa support (support@cloudcasa.io).
 3. To install the agent, execute the following helm commands, replacing ```<Cluster ID>``` with the Cluster ID obtained above:
     ```
     $ helm repo update
-    $ helm install cloudcasa cloudcasa-repo/cloudcasa --set cluster_id=<Cluster ID>
+    $ helm install cloudcasa cloudcasa-repo/cloudcasa --set clusterID=<Cluster ID>
     ```
     This will install the CloudCasa agent and complete registration of the cluster with the CloudCasa service.
 
@@ -36,7 +36,7 @@ For help using the repository, contact CloudCasa support (support@cloudcasa.io).
 2. Execute the following commands to update the agent, replacing ```<Cluster ID>``` with the Cluster ID obtained above:
     ```
     $ helm repo update
-    $ helm upgrade cloudcasa cloudcasa-repo/cloudcasa --set cluster_id=<Cluster ID>
+    $ helm upgrade cloudcasa cloudcasa-repo/cloudcasa --set clusterID=<Cluster ID>
     ```
 
 ### Uninstalling the CloudCasa Agent

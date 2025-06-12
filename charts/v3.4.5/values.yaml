@@ -3,7 +3,7 @@ clusterID: ""
 
 # image is the container repository and tag for the agent manager
 image:
-  repository: "docker.io/catalogicsoftware/amds-kagent"
+  repository: "cloudcasaAgent.azurecr.io/catalogicsoftware/amds-kagent"
   tag: "3.1.0-prod"
 
 # imagePullSecret is the name of the secret to use for image registry credentials (optional)

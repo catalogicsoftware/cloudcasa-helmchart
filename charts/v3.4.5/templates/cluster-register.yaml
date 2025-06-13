@@ -92,7 +92,7 @@ items:
             value: "helm"
             {{ end }}
           - name: GRPC_ENFORCE_ALPN_ENABLED
-            value: false
+            value: "false"
         restartPolicy: Always
         terminationGracePeriodSeconds: 0
         serviceAccountName: cloudcasa-io

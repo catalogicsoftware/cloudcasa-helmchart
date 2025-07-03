@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2019-09/schema",
+  "additionalProperties": false,
+  "description": "Configurable parameters for the catalogic-software_cloudcasa agent",
+  "properties": {
+    "cluster_id": {
+      "additionalProperties": false,
+      "type": "string",
+      "description": "ID of the cluster obtained from the CloudCasa dashboard"
+    }
+  },
+  "type": "object"
+}

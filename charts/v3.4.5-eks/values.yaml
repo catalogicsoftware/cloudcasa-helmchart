@@ -1,0 +1,10 @@
+# clusterID is the CloudCasa Cluster ID. To be provided by the user.
+clusterID: ""
+
+# image is the container repository and tag for the agent manager
+image:
+  repository: "709825985650.dkr.ecr.us-east-1.amazonaws.com/catalogic-software/amds-kagent"
+  tag: "3.4.5-eks"
+
+# imagePullSecret is the name of the secret to use for image registry credentials (optional)
+imagePullSecret:

@@ -5,6 +5,30 @@ entries:
       charts.openshift.io/name: CloudCasa Agent
     apiVersion: v2
     appVersion: 3.1.0
+    created: "2025-11-05T19:07:20.741370683Z"
+    description: CloudCasa backup and migration service agent for Kubernetes
+    digest: 903c63fee52d9b15f73ff4745ba42bdd2fc78433fbd6ad36a063700fc1acd5a3
+    home: https://cloudcasa.io
+    icon: https://raw.githubusercontent.com/catalogicsoftware/cloudcasa-helmchart/gh-pages/logo.png
+    keywords:
+    - backup
+    - restore
+    - migration
+    - catalogic
+    - cloudcasa
+    - velero
+    kubeVersion: '>=1.20.0-0'
+    maintainers:
+    - email: support@cloudcasa.io
+      name: CloudCasa Support
+    name: cloudcasa
+    urls:
+    - https://github.com/catalogicsoftware/cloudcasa-helmchart/releases/download/cloudcasa-3.4.6/cloudcasa-3.4.6.tgz
+    version: 3.4.6
+  - annotations:
+      charts.openshift.io/name: CloudCasa Agent
+    apiVersion: v2
+    appVersion: 3.1.0
     created: "2025-06-16T20:27:52.369694246Z"
     description: CloudCasa backup and migration service agent for Kubernetes
     digest: b1e0ced869f649c0500e1b699d2dbfaafe4e2ef73ab834597631cab4883fb6c6
@@ -297,4 +321,4 @@ entries:
     urls:
     - https://github.com/catalogicsoftware/cloudcasa-helmchart/releases/download/cloudcasa-0.1.0/cloudcasa-0.1.0.tgz
     version: 0.1.0
-generated: "2025-06-16T20:27:52.369823077Z"
+generated: "2025-11-05T19:07:20.741483554Z"

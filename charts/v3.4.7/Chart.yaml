@@ -6,6 +6,7 @@ kubeVersion: ">=1.20.0-0"
 description: CloudCasa backup, DR, and migration service agent for Kubernetes
 annotations:
   charts.openshift.io/name: CloudCasa Agent
+  cloudcasa.io/installation-method: "helm"
 home: https://cloudcasa.io
 icon: https://raw.githubusercontent.com/catalogicsoftware/cloudcasa-helmchart/gh-pages/logo.png
 keywords:

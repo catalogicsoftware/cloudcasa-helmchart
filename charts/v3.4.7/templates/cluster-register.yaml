@@ -94,7 +94,7 @@ items:
             value: "other"
             {{ end }}
           - name: AGENT_INSTALLATION_METHOD
-            value: "helm"
+            value: {{ (index .Chart.Annotations "cloudcasa.io/installation-method" | default "helm") | quote }}
           - name: GRPC_ENFORCE_ALPN_ENABLED
             value: "false"
         restartPolicy: Always

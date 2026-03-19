@@ -58,10 +58,10 @@ items:
         labels:
           app: cloudcasa-kubeagent-manager
       spec:
-        {{ if .Values.imagePullSecret }}
+        {{- if .Values.imagePullSecret }}
         imagePullSecrets:
           - name: {{ .Values.imagePullSecret | quote }}
-        {{ end }}
+        {{- end }}
         containers:
         - image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
           args: ["/usr/local/bin/kubeagentmanager", "--server_addr", "{{ .Values.server.address }}", "--tls", "true", "--skip_tls_verification", "{{ .Values.server.skipTLSVerification }}"]
@@ -86,13 +86,13 @@ items:
           - name: KUBEMOVER_IMAGE
             value: {{ .Values.image.repository }}:{{ .Values.image.tag }}
           - name: DEPLOYMENT_PLATFORM
-            {{ if (lookup "v1" "Namespace" "" "cattle-system") }}
+            {{- if (lookup "v1" "Namespace" "" "cattle-system") }}
             value: "rancher"
-            {{ else if (lookup "v1" "Namespace" "" "openshift") }}
+            {{- else if (lookup "v1" "Namespace" "" "openshift") }}
             value: "openshift"
-            {{ else }}
+            {{- else }}
             value: "other"
-            {{ end }}
+            {{- end }}
           - name: AGENT_INSTALLATION_METHOD
             value: {{ (index .Chart.Annotations "cloudcasa.io/installation-method" | default "helm") | quote }}
           - name: GRPC_ENFORCE_ALPN_ENABLED

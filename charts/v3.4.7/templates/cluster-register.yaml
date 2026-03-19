@@ -88,9 +88,13 @@ items:
           - name: DEPLOYMENT_PLATFORM
             {{ if (lookup "v1" "Namespace" "" "cattle-system") }}
             value: "rancher"
+            {{ else if (lookup "v1" "Namespace" "" "openshift") }}
+            value: "openshift"
             {{ else }}
-            value: "helm"
+            value: "other"
             {{ end }}
+          - name: AGENT_INSTALLATION_METHOD
+            value: "helm"
           - name: GRPC_ENFORCE_ALPN_ENABLED
             value: "false"
         restartPolicy: Always
